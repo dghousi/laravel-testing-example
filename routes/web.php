@@ -25,6 +25,9 @@ Route::middleware('auth')->group(function () {
     Route::get('/products/{id}', [\App\Http\Controllers\ProductController::class, 'show'])->name('products.show'); 
     Route::delete('/products/{id}', [\App\Http\Controllers\ProductController::class, 'destroy'])->name('products.destroy');
 
+
+    Route::get('/posts', [\App\Http\Controllers\PostController::class, 'index'])->name('posts.index');
+    Route::post('/posts', [\App\Http\Controllers\PostController::class, 'store'])->name('posts.store');
 });
 
 
